@@ -12,6 +12,7 @@
 
         var button = document.getElementById('submit_country');
         var input = document.getElementById('country_input');
+
         function isCountryValid(country) {
             var isFinded = false;
             for (var i = 0; i < dataset.length; i++) {
@@ -34,7 +35,7 @@
             chart.animation(true);
             chart.crosshair().enabled;
             chart.tooltip().positionMode('point');
-            chart.title('Mortality rate for ' + data[0][0]);
+            chart.title('Mortality rate of ' + data[0][0]);
             chart.xAxis().title('Years');
             var lower = chart.line(lower_data);
             var median = chart.line(median_data);
@@ -91,6 +92,11 @@
                 plot(result);   
                     }
             }
-
+        document.querySelector('input').addEventListener('keydown', function(event) {
+            if (event.keyCode === 13) {
+                 findCountry();
+            }
         button.onclick = findCountry;
+        
+        })
     };
