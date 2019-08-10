@@ -4,19 +4,19 @@ body {
 }
 .wrapper {
     position: relative;
-    max-width: 950px;
-    min-width: 700px;
+    max-width: 1200px;
+    min-width: 850px;
     margin: 30px auto 0;
     /*background: #f0f0f0;*/
-    height: 100vh;
+    height: 90vh;
 }
 #plot_for_each_country {
-    width: 700px;
-    height: 600px;
+    width: 850px;
+    height: 250px;
     left: 50%;
     margin-left: -350px;
     position: relative;
-    top: 10%;
+    top: 40px;
     display: flex;
     flex-direction: column;
 }
@@ -24,9 +24,8 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
     left: 50%;
-    margin-left: -150px; 
+    margin-left: -250px; 
     width: 300px;
     height: 200px;
     text-align: center;
@@ -69,10 +68,15 @@ body {
 }
 
 #container {
+    margin-left: -10%;
     margin-top: 20px;
-    width: 700px;
-    height: 400px;
+    width: 850px;
+    height: 600px;
 }
 #country_input:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+#map {
+    width: 100%;
+    height: 500px;
 }
