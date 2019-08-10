@@ -33,11 +33,12 @@ body {
     width: 200px;
 }
 #submit_country {
+    margin-top: 10px;
     height: 25px;
-    width: 100px;
+    width: 324px;
 }
 #container {
-    margin: 0;
+    margin-top: 20px;
     width: 700px;
     height: 400px;
 }
