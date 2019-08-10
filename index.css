@@ -5,6 +5,7 @@ body {
 .wrapper {
     position: relative;
     max-width: 950px;
+    min-width: 700px;
     margin: 30px auto 0;
     background: #f0f0f0;
     height: 100vh;
