@@ -89,7 +89,7 @@ function oneCountryPlot (countryData) {
     chart.animation(true);
     chart.crosshair().enabled;
     chart.tooltip().positionMode('point');
-    chart.title('Mortality rate of ' + countryData[0][0]);
+    chart.title('IMR of ' + countryData[0][0]);
     chart.xAxis().title('Years');
     chart.yAxis().title('Number of deaths of children under one year of age per 1000 live births');
     let lower = chart.line(lower_data);
@@ -117,7 +117,7 @@ function findCountry(data, country) {
     plotter.append(container);
     container.id = 'container';
     if (!isCountryValid(data ,country)) {
-        alert('Такой страны нет в базе!');
+        alert('Such a country is not in the database!');
         return;
     } else {
         let result = [[],[],[],[],[],[],[],[]];
