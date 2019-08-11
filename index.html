@@ -12,20 +12,23 @@
     <link href="https://fonts.googleapis.com/css?family=Blinker:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--<header>
-        <span class="header_text">
-            Infant Mortality Rate
-        </span> -->
+    <header>
+        <span id="header_text">
+            Infant mortality rates in 2017
+        </span>
     </header>
-    <div class="wrapper">
-        <div id="map"></div>
-        <div id="plot_for_each_country">
-                <form id="country_selector_form" onsubmit="return false;">
-                    <span class="logo_text">Enter the country</span>
-                    <input type="text" id="country_input" placeholder="For example: Albania">
-                    <input type="button" id="submit_country" value="View">
-                </form>
+    <section>
+        <div class="wrapper">
+            <div id="map"></div>
+            <div id="plot_for_each_country">
+                <span id="header_plot">To see more information about a specific country</span>
+                    <form id="country_selector_form" onsubmit="return false;">
+                        <span class="logo_text">Enter the country:</span>
+                        <input type="text" id="country_input" placeholder="For example: Russian Federation">
+                        <input type="button" id="submit_country" value="View">
+                    </form>
+            </div>
         </div>
-    </div>
+    </section>
 </body>
 </html>

@@ -1,4 +1,7 @@
+'use strict'
+
 // Получаем данные из JSON файлов, расположенных на Github.com
+
 let countriesDataURL = 'https://lmm1ng.github.io/ChartsJS/countries.json';
 let countriesData = new XMLHttpRequest();
 countriesData.open('GET', countriesDataURL);
@@ -39,7 +42,7 @@ function mapPlotter(mapData) {
     colors.enabled(true);
     map.container('map');
     map.draw();
-}
+};
 
 // Функция setMap преобразует данные в удобный вид 
 // и передаёт их в функцию mapPlotter для построения карты
@@ -74,6 +77,7 @@ function isCountryValid(data, country) {
         return false;
     };
 };
+
 // Функция oneCountryPlot выполняет построения графика зависимости смертности от года
 
 function oneCountryPlot (countryData) {
@@ -87,6 +91,7 @@ function oneCountryPlot (countryData) {
     chart.tooltip().positionMode('point');
     chart.title('Mortality rate of ' + countryData[0][0]);
     chart.xAxis().title('Years');
+    chart.yAxis().title('Number of deaths of children under one year of age per 1000 live births');
     let lower = chart.line(lower_data);
     let median = chart.line(median_data);
     let upper = chart.line(upper_data);
@@ -99,7 +104,8 @@ function oneCountryPlot (countryData) {
     chart.container('container');
     chart.legend().enabled(true);
     chart.draw();
-}
+};
+
 // Функция findCountry преобразует данные в удобный вид
 // и передаёт их в функцию oneCountryPlot для построения графика
 
@@ -116,6 +122,7 @@ function findCountry(data, country) {
     } else {
         let result = [[],[],[],[],[],[],[],[]];
         let years = ["2010", "2011", "2012", "2013","2014","2015","2016","2017"];
+        // Заполняем массив нужным образом для дальнейшей работы с AnyChart
         for (let i = 0; i < data.length; i++) {
                 if (data[i]["Country Name"] == country) {
                         if (data[i]["Uncertainty bounds*"] == "Lower") {
@@ -134,10 +141,10 @@ function findCountry(data, country) {
                             for (let j = 0; j < years.length; j++) {
                                 result[j][0] = data[i]["Country Name"];
                                 result[j][4] = data[i][years[j]];
-                            }
-                        }
-                    }
-                }
+                            };
+                        };
+                    };
+                };
         for (let i = 0; i < years.length; i++) {
             result[i][1] = years[i];
         };
@@ -146,9 +153,11 @@ function findCountry(data, country) {
 };
 
 // После загрузки файлов выполняем скрипт:
+
 countriesData.onload = function () { 
     mainData.onload = function () {
-// Инициализируем переменные
+        
+// Инициализируем данные
 
         let countrData = countriesData.response;
         let data = mainData.response;

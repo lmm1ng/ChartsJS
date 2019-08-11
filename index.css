@@ -1,13 +1,27 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Blinker', sans-serif;
+}
+#header_text {
+    font-weight: bold;
+    font-size: 2em;
+    width: 100%;
+    margin: 30px 30px 30px -40px;
+    text-align: center;
+    display: block;
 }
 .wrapper {
     position: relative;
     max-width: 1200px;
     min-width: 850px;
     margin: 30px auto 0;
-    /*background: #f0f0f0;*/
+}
+#header_plot {
+    margin: 0 20px 20px -200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 #plot_for_each_country {
     width: 850px;
@@ -31,7 +45,7 @@ body {
 }
 #country_input {
     border:1px solid #9E9E9E;
-    margin-top: 2px;
+    margin-top: 10px;
     margin-bottom: 2px;
     font-size: 14px;
     background: #FFF;
@@ -39,6 +53,7 @@ body {
     padding: 3px;
     height: 20px;
     width: 294px;
+    text-align: center;
 }
 #submit_country {
     margin-top: 10px;
@@ -61,9 +76,7 @@ body {
     background: white;
 }
 .logo_text {
-    font-family: 'Blinker', sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 #container {
