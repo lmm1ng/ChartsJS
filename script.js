@@ -156,7 +156,7 @@ function findCountry(data, country) {
 
 countriesData.onload = function () { 
     mainData.onload = function () {
-        
+
 // Инициализируем данные
 
         let countrData = countriesData.response;
@@ -171,10 +171,18 @@ countriesData.onload = function () {
         document.querySelector('input').addEventListener('keydown', function(event) {
             if (event.keyCode === 13) {
                 findCountry(dataset, input.value);
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth"
+                });
             }});
         document.querySelector('#submit_country').addEventListener('click', function(event) {
             event.preventDefault();
             findCountry(dataset, input.value);
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth"
+            });
         });
     };
 };
