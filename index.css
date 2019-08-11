@@ -25,12 +25,10 @@ body {
 }
 #plot_for_each_country {
     width: 850px;
-    height: 250px;
     left: 50%;
     margin-left: -350px;
     position: relative;
-    top: 40px;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
 }
 #country_selector_form {
@@ -39,8 +37,8 @@ body {
     flex-direction: column;
     left: 50%;
     margin-left: -250px; 
-    width: 300px;
-    height: 200px;
+    width: 303px;
+    height: 150px;
     text-align: center;
 }
 #country_input {
@@ -81,7 +79,6 @@ body {
 
 #container {
     margin-left: -10%;
-    margin-top: 20px;
     width: 850px;
     height: 600px;
 }
